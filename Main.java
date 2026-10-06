@@ -8,37 +8,48 @@ public class Main {
     {
 
         System.out.println(
-            "Enter Grade varying from Castbound,Awesome,Noctural,Tryhard,Godbreaker");
-        String grade = "Nice-tier";
+            "Enter Grade varying from Castbound,Requiem,Noctural,Tryhard,Godbreaker");
+        String grade = "Castbound";
+
+        Random random = new Random();
 
         if (grade.equals("Castbound")) {
-            System.out.println(
-                "Lurespeed = Inf, Luck = 390.0, Resilience = 37.2");
+            double Luck = 390.0;
+            double Resilience = 37.2;
+           System.out.printf("Lurespeed = Inf, Luck = %.1f, Resilience = %.1f%n", luck, resilience);
+        }
+        else if (grade.equals("Requiem")) {
+            double Lurespeed = 80.0 + (90.0 - 80.0) * random.nextDouble();
+            double Luck = 125.0 + (175.0 - 125.0) * random.nextDouble();
+            double Resilience = 20.0 + (40.0 - 20.0) * random.nextDouble();
+
+           System.out.printf("Lurespeed = %.1f, Luck = %.1f, Resilience = %.1f%n", lurespeed, luck, resilience);
+        }
+        else if (grade.equals("Noctural")) {
+            double Lurespeed = 90.0 + (120.0 - 90.0) * random.nextDouble();
+            double Luck = 180.0 + (190.0 - 180.0) * random.nextDouble();
+            double Resilience =  25.0 + (50.0 - 25.0) * random.nextDouble();
+
+           System.out.printf("Lurespeed = %.1f, Luck = %.1f, Resilience = %.1f%n", lurespeed, luck, resilience);
         }
 
-        else if (grade -- "Awesome") {
-            System.out.println(
-                " Lurespeed = between 80 to 90, Luck = between 125.0 to 175.0, Resilience = between 20 to 40");
+        else if (grade.equals("Tryhard")) {
+            double lurespeed = 10.0 + (35.0 - 10.0) * random.nextDouble();
+            double luck = 55.0 + (60.0 - 55.0) * random.nextDouble();
+            double resilience = 1.0 + (10.0 - 1.0) * random.nextDouble();
+
+            System.out.printf("Lurespeed = %.1f, Luck = %.1f, Resilience = %.1f%n", lurespeed, luck, resilience);
         }
 
-        else if (grade -- "Noctural") {
-            System.out.println(
-                "Lurespeed = between 90 to 100, Luck = between 180.0 to 190.0, Resilience = between 25.0 to 50.0");
-        }
+        else if (grade.equals("Godbreaker")) {
+            double Lurespeed = 225.0 + (300.0 - 225.0) * random.nextDouble();
+            double Luck = 256.0 + (300.0 - 256.0) * random.nextDouble();
+            double Resilience = 45.0 + (60.0 - 45.0) * random.nextDouble();
 
-        else if (grade -- "Tryhard") {
-            System.out.println(
-                "Lurespeed = between 10 to 35, Luck = between 55.0 to 60.0, Resilience = between 1.0 to 10.0");
-        }
-
-        else if (grade -- "Godbreaker") {
-            System.out.println(
-                "Lurespeed = between 225.0 to 300.0, Luck = between 256.0 to 300.0, Resilience = between 45.0 to 60.0");
+            System.out.printf("Lurespeed = %.1f, Luck = %.1f, Resilience = %.1f%n", lurespeed, luck, resilience);
         }
         else {
-
-            System.out.println(
-                "The grade you entered is not valid!");
+            System.out.println("The grade you entered is not valid!");
         }
     }
 }
