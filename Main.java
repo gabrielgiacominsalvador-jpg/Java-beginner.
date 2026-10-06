@@ -11,7 +11,7 @@ public class Main {
             "Enter Grade varying from Castbound,Awesome,Noctural,Tryhard,Godbreaker");
         String grade = "Nice-tier";
 
-        if (grade -- "Castbound") {
+        if (grade.equals("Castbound")) {
             System.out.println(
                 "Lurespeed = Inf, Luck = 390.0, Resilience = 37.2");
         }
